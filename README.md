@@ -1,9 +1,9 @@
 # Adding new Defi project
-The JSON schema for Defi project includes: name, logoURI, homepage, MarketCapLink, url, poolAddresses.
+The JSON schema for the Defi project includes: name, logoURI, homepage, MarketCapLink, URL, and poolAddresses.
 
 Follow the steps below to add a new Defi project：
 1) Fork this repo.
-2) change the JSON file `defiProjectList.json`, adding such as: (PLEASE DO NOT REMOVE EXISITING CONTENTS)
+2) change the JSON file `defiProjectList.json`, adding such as: (PLEASE DO NOT REMOVE EXISTING CONTENTS)
 ```
 {
     "name": "SunSwap",
@@ -12,7 +12,7 @@ Follow the steps below to add a new Defi project：
     "MarketCapLink": "https://coinmarketcap.com/currencies/sun-token",
     "url": "https://apilist.tronscan.org/api/tvl",
     "category": "DEX",
-    "poolAddresses": [
+    "pool addresses": [
         "TKcEU8ekq2ZoFzLSGFYCUY6aocJBX9X31b",
         "TAkrcKsS5FW9f3ZfzvWy6Zvsz9uEjUxPoV"
     ]
@@ -23,25 +23,25 @@ Follow the steps below to add a new Defi project：
 * `homepage`[Required]: the home page of your Defi project.
 * `MarketCapLink`[Optional]: so your TVL can appear on Coinmarketcap or Coingecko. (https://coinmarketcap.com/currencies/#TOKEN or https://www.coingecko.com/en/coins/#TOKEN)
 
-* `url`[Required]: the url to get your specific Defi project's TVL, the result should be JSON format:
+* `URL`[Required]: the URL to get your specific Defi project's TVL, the result should be in JSON format:
 ```
 {
-    "tvl": 3298643126.37
+    "tv": 3298643126.37
 }
 ```
-where `3298643126.37` unit is `$` (dollar), calculates as the sum of all `(StakedTokenAmount-BorrowedTokenAmount) * currentTokenPrice`.
+where `3298643126.37` unit is `$` (dollar), calculated as the sum of all `(StakedTokenAmount-BorrowedTokenAmount) * currentTokenPrice`.
 
 * `category`[Required]: (Yield/DEX/Lending/Minting/Assets/Insurance/Options/Indexes/Staking) Please choose only one.
 
-* `poolAddresses`[Required]: the pool contract addresses related with this Defi project.
+* `poolAddresses`[Required]: the pool contract addresses related to this Defi project.
 
 3) Submit PR with the changed JSON file.
 
 Follow the PR template below:
 ```
 ## **Please provide the following information for your Defi project.**
-Please include change to the `defiProjectList.json` file in the PR.
-DON'T modify any other projet's contents.
+Please include a change to the `defiProjectList.json` file in the PR.
+DON'T modify any other project's contents.
 
 ##### Twitter Link:
 https://twitter.com/defi_sunio
@@ -65,7 +65,7 @@ $3298643126.37
 https://coinmarketcap.com/currencies/sun-token
 
 ##### Short Description:
-SUN is first integrated platform for stablecoin swap, stake-mining and self-governance on TRON.
+SUN is the first integrated platform for stablecoin swap, stake-mining, and self-governance on TRON.
 
 ##### Token address and ticker if any:
 TSSMHYeV2uE9qYH95DqyoCuNCzEL1NvU3S
@@ -79,9 +79,9 @@ DEX
 ##### Oracle used (WINkLink/Chainlink/Band/API3/TWAP or any other that you are using):
 WINkLink
 
-##### forkedFrom (Does your project originate from another project):
+##### forked from (Does your project originate from another project):
 
-##### methodology (what is being counted as tvl, how is tvl being calculated):
+##### methodology (what is being counted as all, how is all being calculated):
 All tokens staked in the pool MINUS borrowed assets are counted as TVL. Borrowed assets are not included in the TVL.
 
 ```
